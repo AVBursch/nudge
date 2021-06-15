@@ -24,6 +24,8 @@ class App extends React.Component {
 
 
     }
+
+    window["debug"] = true;
   }
 
   render() {

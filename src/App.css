@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+input.float-right {float:right; width: 7ex}
+
+li.display-block {display: block}
+
+label.inline-block {display: inline-block;}

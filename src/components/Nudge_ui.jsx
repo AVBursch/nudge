@@ -41,15 +41,15 @@ export class NudgeUI extends React.Component {
                 <title> Nudge </title>
 
                 <ul style={{ paddingTop: 0, marginTop: -1, paddingRight: 5, paddingBottom: 0, paddingLeft: 5 }}>
-                    <li style={{ paddingBottom: 5 }}>
-                        <label style={{ paddingBottom: 9 }}>Position(units):	</label>
+                    <li className="display-block" style={{ paddingBottom: 5 }}>
+                        <label className="inline-block" style={{ paddingBottom: 9 }}>Position(units):	</label>
                         <input
+                            className="float-right"
                             id="position_input"
                             title="Position in units"
                             onChange={(e) => { }}
                             type="number"
                             value="25"
-                            style={{ width: 7 }}
                             maxlength="36"
                             align="right" />
                         <br></br>
@@ -91,15 +91,15 @@ export class NudgeUI extends React.Component {
                         /> Z</label>
                     </li>
 
-                    <li style={{ paddingBottom: 5 }}>
-                        <label style={{ paddingBottom: 10 }}>Rotation(%):</label>
+                    <li className="display-block" style={{ paddingBottom: 5 }}>
+                        <label className="inline-block" style={{ paddingBottom: 10 }}>Rotation(%):</label>
                         <input
+                            className="float-right"
                             id="rotation_input"
                             title="Rotation in percentage"
                             onChange={(e) => { }}
                             type="number"
                             value="3"
-                            style={{ width: 7 }}
                             maxlength="36"
                             align="right" />
                         <br></br>
@@ -141,15 +141,15 @@ export class NudgeUI extends React.Component {
                         /> Z</label>
                     </li>
 
-                    <li style={{ paddingBottom: 6 }}>
-                        <label style={{ paddingBottom: 9 }}>Scale(%):</label>
+                    <li className="display-block" style={{ paddingBottom: 6 }}>
+                        <label className="inline-block" style={{ paddingBottom: 9 }}>Scale(%):</label>
                         <input
+                            className="float-right"
                             id="scale_input"
                             title="Scale in percentage"
                             onChange={(e) => { }}
                             type="number"
                             value="5"
-                            style={{ width: 7 }}
                             maxlength="36"
                             align="right" />
                         <br></br>
@@ -191,11 +191,11 @@ export class NudgeUI extends React.Component {
                         /> Z</label>
                     </li>
 
-                    <li style={{ paddingBottom: 5 }}>
+                    <li className="display-block" style={{ paddingBottom: 5 }}>
                         <label><input type="checkbox" id="randomize" onClick="handleRandomButtonClicked();" /> Random</label>
                     </li>
 
-                    <li >
+                    <li className="display-block">
                         <button id="ok" onclick="handleSaveButonClick();"><small>Save</small></button>
                         <button id="cancel" onclick="handleCancelButtonClick();"><small>Cancel</small></button>
                         <button id="apply" onclick="handleApplyButtonClick();"><small>Apply</small></button>
