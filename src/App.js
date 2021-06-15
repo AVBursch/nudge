@@ -1,26 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { NudgeUI } from '../src/components/Nudge_ui';
+import { NudgeUI } from './components/Nudge_ui';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
 
-      nudgePositionXcheckboxValue = true,
-      nudgePositionYcheckboxValue = false,
-      nudgePositionZcheckboxValue = false,
-      nudgePositionTextboxValue = '',
-      nudgeRotationXcheckboxValue = true,
-      nudgeRotationYcheckboxValue = false,
-      nudgeRotationZcheckboxValue = false,
-      nudgeRotationTextboxValue = '',
-      nudgeScaleXcheckboxValue = true,
-      nudgeScaleYcheckboxValue = false,
-      nudgeScaleZcheckboxValue = false,
-      nudgeScaleTextboxValue = '',
-      randomCheckboxValue = false,
+      nudgePositionXcheckboxValue: true,
+      nudgePositionYcheckboxValue: false,
+      nudgePositionZcheckboxValue: false,
+      nudgePositionTextboxValue: '',
+      nudgeRotationXcheckboxValue: true,
+      nudgeRotationYcheckboxValue: false,
+      nudgeRotationZcheckboxValue: false,
+      nudgeRotationTextboxValue: '',
+      nudgeScaleXcheckboxValue: true,
+      nudgeScaleYcheckboxValue: false,
+      nudgeScaleZcheckboxValue: false,
+      nudgeScaleTextboxValue: '',
+      randomCheckboxValue: false,
 
 
     }
@@ -43,7 +43,7 @@ class App extends React.Component {
         nudgeScaleTextboxValue={this.state.nudgeScaleTextboxValue}
         randomCheckboxValue={this.state.randomCheckboxValue}
 
-        handleSaveButonClick={this.handleSaveButonClick}
+        handleSaveButtonClick={this.handleSaveButtonClick}
         handleCancelButtonClick={this.handleCancelButtonClick}
         handleApplyButtonClick={this.handleApplyButtonClick}
         handleVersionButtonClick={this.handleVersionButtonClick}
@@ -63,99 +63,97 @@ class App extends React.Component {
       />
 
     </React.Fragment>)
+  }
 
-    handleSaveButonClick = () => {
+  handleSaveButtonClick = () => {
 
-    }
+  }
 
-    handleCancelButtonClick = () => {
+  handleCancelButtonClick = () => {
 
-    }
+  }
 
-    handleApplyButtonClick = () => {
+  handleApplyButtonClick = () => {
 
-    }
+  }
 
-    handleVersionButtonClick = () => {
+  handleVersionButtonClick = () => {
 
-    }
+  }
 
-    handlePositionValueTextUpdate = (value) => {
-      this.setState({
-        nudgePositionTextboxValue: value
-      });
-    }
+  handlePositionValueTextUpdate = (value) => {
+    this.setState({
+      nudgePositionTextboxValue: value
+    });
+  }
 
-    handlePositionXCheckboxClicked = (value) => {
-      this.setState({
-        nudgePositionXcheckboxValue: value
-      });
-    }
+  handlePositionXCheckboxClicked = (value) => {
+    this.setState({
+      nudgePositionXcheckboxValue: value
+    });
+  }
 
-    handlePositionYCheckboxClicked = (value) => {
-      this.setState({
-        nudgePositionYcheckboxValue: value
-      });
-    }
+  handlePositionYCheckboxClicked = (value) => {
+    this.setState({
+      nudgePositionYcheckboxValue: value
+    });
+  }
 
-    handlePositionZCheckboxClicked = (value) => {
-      this.setState({
-        nudgePositionZcheckboxValue: value
-      });
-    }
+  handlePositionZCheckboxClicked = (value) => {
+    this.setState({
+      nudgePositionZcheckboxValue: value
+    });
+  }
 
-    handleRotationValueTextUpdate = (value) => {
-      this.setState({
-        nudgeRotationTextboxValue: value
-      });
-    }
+  handleRotationValueTextUpdate = (value) => {
+    this.setState({
+      nudgeRotationTextboxValue: value
+    });
+  }
 
-    handleRotationXCheckboxClicked = (value) => {
-      this.setState({
-        nudgeRotationXcheckboxValue: value
-      });
-    }
+  handleRotationXCheckboxClicked = (value) => {
+    this.setState({
+      nudgeRotationXcheckboxValue: value
+    });
+  }
 
-    handleRotationYCheckboxClicked = (value) => {
-      this.setState({
-        nudgeRotationYcheckboxValue: value
-      });
-    }
+  handleRotationYCheckboxClicked = (value) => {
+    this.setState({
+      nudgeRotationYcheckboxValue: value
+    });
+  }
 
-    handleRotationZCheckboxClicked = (value) => {
-      this.setState({
-        nudgeRotationZcheckboxValue: value
-      });
-    }
+  handleRotationZCheckboxClicked = (value) => {
+    this.setState({
+      nudgeRotationZcheckboxValue: value
+    });
+  }
 
-    handleScaleValueTextUpdate = (value) => {
-      this.setState({
-        nudgeScaleTextboxValue: value
-      });
-    }
+  handleScaleValueTextUpdate = (value) => {
+    this.setState({
+      nudgeScaleTextboxValue: value
+    });
+  }
 
-    handleScaleXCheckboxClicked = (value) => {
-      this.setState({
-        nudgeScaleXcheckboxValue: value
-      });
-    }
+  handleScaleXCheckboxClicked = (value) => {
+    this.setState({
+      nudgeScaleXcheckboxValue: value
+    });
+  }
 
-    handleScaleYCheckboxClicked = (value) => {
-      this.setState({
-        nudgeScaleYcheckboxValue: value
-      });
-    }
+  handleScaleYCheckboxClicked = (value) => {
+    this.setState({
+      nudgeScaleYcheckboxValue: value
+    });
+  }
 
-    handleScaleZCheckboxClicked = (value) => {
-      this.setState({
-        nudgeScaleZcheckboxValue: value
-      });
-    }
+  handleScaleZCheckboxClicked = (value) => {
+    this.setState({
+      nudgeScaleZcheckboxValue: value
+    });
+  }
 
-    handleRandomButtonClicked = () => {
-
-    }
-
+  handleRandomButtonClicked = () => {
 
   }
 }

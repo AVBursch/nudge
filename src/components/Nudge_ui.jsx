@@ -1,24 +1,24 @@
 import React from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-class NudgeUI extends React.Component {
+export class NudgeUI extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            nudgePositionXcheckboxValue = this.props.nudgePositionXcheckboxValue,
-            nudgePositionYcheckboxValue = this.props.nudgePositionYcheckboxValue,
-            nudgePositionZcheckboxValue = this.props.nudgePositionZcheckboxValue,
-            nudgePositionTextboxValue = this.props.nudgeRotationTextboxValue,
-            nudgeRotationXcheckboxValue = this.props.nudgeRotationXcheckboxValue,
-            nudgeRotationYcheckboxValue = this.props.nudgeRotationYcheckboxValue,
-            nudgeRotationZcheckboxValue = this.props.nudgeRotationZcheckboxValue,
-            nudgeRotationTextboxValue = this.props.nudgeRotationTextboxValue,
-            nudgeScaleXcheckboxValue = this.props.nudgeScaleXcheckboxValue,
-            nudgeScaleYcheckboxValue = this.props.nudgeScaleYcheckboxValue,
-            nudgeScaleZcheckboxValue = this.props.nudgeScaleZcheckboxValue,
-            nudgeScaleTextboxValue = this.props.nudgeScaleTextboxValue,
-            randomCheckboxValue = this.props.randomCheckboxValue,
+            nudgePositionXcheckboxValue: this.props.nudgePositionXcheckboxValue,
+            nudgePositionYcheckboxValue: this.props.nudgePositionYcheckboxValue,
+            nudgePositionZcheckboxValue: this.props.nudgePositionZcheckboxValue,
+            nudgePositionTextboxValue: this.props.nudgeRotationTextboxValue,
+            nudgeRotationXcheckboxValue: this.props.nudgeRotationXcheckboxValue,
+            nudgeRotationYcheckboxValue: this.props.nudgeRotationYcheckboxValue,
+            nudgeRotationZcheckboxValue: this.props.nudgeRotationZcheckboxValue,
+            nudgeRotationTextboxValue: this.props.nudgeRotationTextboxValue,
+            nudgeScaleXcheckboxValue: this.props.nudgeScaleXcheckboxValue,
+            nudgeScaleYcheckboxValue: this.props.nudgeScaleYcheckboxValue,
+            nudgeScaleZcheckboxValue: this.props.nudgeScaleZcheckboxValue,
+            nudgeScaleTextboxValue: this.props.nudgeScaleTextboxValue,
+            randomCheckboxValue: this.props.randomCheckboxValue,
         }
         this.nudgePositionXcheckboxValueRef = React.createRef();
         this.nudgePositionYcheckboxValueRef = React.createRef();
@@ -40,16 +40,16 @@ class NudgeUI extends React.Component {
 
                 <title> Nudge </title>
 
-                <ul style="padding-top: 0px; margin-top:-1px; padding-right: 5px; padding-bottom: 0px; padding-left: 5px;">
-                    <li style="display: block; padding-bottom: 5px;">
-                        <label style="display: inline-block; padding-bottom: 9px;">Position(units):	</label>
+                <ul style={{ paddingTop: 0, marginTop: -1, paddingRight: 5, paddingBottom: 0, paddingLeft: 5 }}>
+                    <li style={{ paddingBottom: 5 }}>
+                        <label style={{ paddingBottom: 9 }}>Position(units):	</label>
                         <input
                             id="position_input"
                             title="Position in units"
-                            onchange="handlePositionValueTextUpdate(value);"
+                            onChange={(e) => { }}
                             type="number"
                             value="25"
-                            style="width: 7ex; float:right; "
+                            style={{ width: 7 }}
                             maxlength="36"
                             align="right" />
                         <br></br>
@@ -91,15 +91,15 @@ class NudgeUI extends React.Component {
                         /> Z</label>
                     </li>
 
-                    <li style="display: block; padding-bottom: 5px;">
-                        <label style="display: inline-block; padding-bottom: 10px;">Rotation(%):</label>
+                    <li style={{ paddingBottom: 5 }}>
+                        <label style={{ paddingBottom: 10 }}>Rotation(%):</label>
                         <input
                             id="rotation_input"
                             title="Rotation in percentage"
-                            onchange="handleRotationValueTextUpdate(value);"
+                            onChange={(e) => { }}
                             type="number"
                             value="3"
-                            style="width: 7ex; float:right;"
+                            style={{ width: 7 }}
                             maxlength="36"
                             align="right" />
                         <br></br>
@@ -141,15 +141,15 @@ class NudgeUI extends React.Component {
                         /> Z</label>
                     </li>
 
-                    <li style="display: block; padding-bottom: 6px;">
-                        <label style="display: inline-block; padding-bottom: 9px;">Scale(%):</label>
+                    <li style={{ paddingBottom: 6 }}>
+                        <label style={{ paddingBottom: 9 }}>Scale(%):</label>
                         <input
                             id="scale_input"
                             title="Scale in percentage"
-                            onchange="handleScaleValueTextUpdate(value);"
+                            onChange={(e) => { }}
                             type="number"
                             value="5"
-                            style="width: 7ex; float:right;"
+                            style={{ width: 7 }}
                             maxlength="36"
                             align="right" />
                         <br></br>
@@ -191,11 +191,11 @@ class NudgeUI extends React.Component {
                         /> Z</label>
                     </li>
 
-                    <li style="display: block; padding-bottom: 5px;">
+                    <li style={{ paddingBottom: 5 }}>
                         <label><input type="checkbox" id="randomize" onClick="handleRandomButtonClicked();" /> Random</label>
                     </li>
 
-                    <li style="display: block;">
+                    <li >
                         <button id="ok" onclick="handleSaveButonClick();"><small>Save</small></button>
                         <button id="cancel" onclick="handleCancelButtonClick();"><small>Cancel</small></button>
                         <button id="apply" onclick="handleApplyButtonClick();"><small>Apply</small></button>
@@ -209,4 +209,3 @@ class NudgeUI extends React.Component {
     }
 }
 
-export default NudgeUI;
