@@ -32,6 +32,7 @@ export class NudgeUI extends React.Component {
         this.nudgeScaleYcheckboxValue = React.createRef();
         this.nudgeScaleZcheckboxValue = React.createRef();
         this.nudgeScaleTextboxValueRef = React.createRef();
+        this.randomCheckboxValue = React.createRef();
     }
 
     render() {
@@ -192,7 +193,16 @@ export class NudgeUI extends React.Component {
                     </li>
 
                     <li className="display-block" style={{ paddingBottom: 5 }}>
-                        <label><input type="checkbox" id="randomize" onClick="handleRandomButtonClicked();" /> Random</label>
+                        <label><input
+                            type="checkbox"
+                            id="randomize"
+                            onChange={(e) => {
+                                const value = !(e.target.value);
+
+                                this.randomCheckboxValue.current.value = value;
+                                this.props.handleRandomButtonClicked(value);
+                            }}
+                        /> Random</label>
                     </li>
 
                     <li className="display-block">

@@ -68,95 +68,163 @@ class App extends React.Component {
   }
 
   handleSaveButtonClick = () => {
-
+    if (window["debug"] === false)
+      window.location = 'skp:on_ok@';
   }
 
   handleCancelButtonClick = () => {
-
+    if (window["debug"] === false)
+      window.location = 'skp:on_cancel';
   }
 
   handleApplyButtonClick = () => {
-
+    if (window["debug"] === false)
+      window.location = 'skp:on_apply';
   }
 
   handleVersionButtonClick = () => {
-
+    if (window["debug"] === false)
+      window.location = 'skp:on_version@';
   }
 
   handlePositionValueTextUpdate = (value) => {
     this.setState({
       nudgePositionTextboxValue: value
     });
+
+    var re = /^([-+]?[0-9]+[.])*[-+]?[0-9]+$/;
+    var ele = value;
+    var fcnt = ele.replace(/(^[ ]+|[ ]+$)/g, '');
+    if (!(re.test(fcnt))) {
+      alert("Please enter a valid number");
+      ele.value = "25";
+      return;
+    }
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_update_position_input@' + fcnt;
   }
 
   handlePositionXCheckboxClicked = (value) => {
     this.setState({
       nudgePositionXcheckboxValue: value
     });
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_position_x_pressed@' + value;
   }
 
   handlePositionYCheckboxClicked = (value) => {
     this.setState({
       nudgePositionYcheckboxValue: value
     });
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_position_y_pressed@' + value;
   }
 
   handlePositionZCheckboxClicked = (value) => {
     this.setState({
       nudgePositionZcheckboxValue: value
     });
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_position_z_pressed@' + value;
   }
 
   handleRotationValueTextUpdate = (value) => {
     this.setState({
       nudgeRotationTextboxValue: value
     });
+
+    var re = /^([-+]?[0-9]+[.])*[-+]?[0-9]+$/;
+    var ele = value;
+    var fcnt = ele.replace(/(^[ ]+|[ ]+$)/g, '');
+    if (!re.test(fcnt)) {
+      alert("Please enter a valid number");
+      ele.value = "3";
+      return;
+    }
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_update_rotation_input@' + fcnt;
   }
 
   handleRotationXCheckboxClicked = (value) => {
     this.setState({
       nudgeRotationXcheckboxValue: value
     });
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_rotation_x_pressed@' + value;
   }
 
   handleRotationYCheckboxClicked = (value) => {
     this.setState({
       nudgeRotationYcheckboxValue: value
     });
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_rotation_y_pressed@' + value;
   }
 
   handleRotationZCheckboxClicked = (value) => {
     this.setState({
       nudgeRotationZcheckboxValue: value
     });
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_rotation_z_pressed@' + value;
   }
 
   handleScaleValueTextUpdate = (value) => {
     this.setState({
       nudgeScaleTextboxValue: value
     });
+
+    var re = /^([-+]?[0-9]+[.])*[-+]?[0-9]+$/;
+    var ele = value;
+    var fcnt = ele.replace(/(^[ ]+|[ ]+$)/g, '');
+    if (!re.test(fcnt)) {
+      alert("Please enter a valid number");
+      ele.value = "5";
+      return;
+    }
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_update_scale_input@' + fcnt;
   }
 
   handleScaleXCheckboxClicked = (value) => {
     this.setState({
       nudgeScaleXcheckboxValue: value
     });
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_scale_x_pressed@' + value;
   }
 
   handleScaleYCheckboxClicked = (value) => {
     this.setState({
       nudgeScaleYcheckboxValue: value
     });
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_scale_y_pressed@' + value;
   }
 
   handleScaleZCheckboxClicked = (value) => {
     this.setState({
       nudgeScaleZcheckboxValue: value
     });
+
+    if (window["debug"] === false)
+      window.location = 'skp:on_scale_z_pressed@' + value;
   }
 
-  handleRandomButtonClicked = () => {
-
+  handleRandomButtonClicked = (value) => {
+    if (window["debug"] === false)
+      window.location = 'skp:on_random_pressed@' + value;
   }
 }
 

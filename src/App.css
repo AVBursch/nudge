@@ -42,3 +42,11 @@ input.float-right {float:right; width: 7ex}
 li.display-block {display: block}
 
 label.inline-block {display: inline-block;}
+
+* {padding: 0px; margin: 0px;}
+html {overflow: noscroll;}
+body {font: 80% Arial, sans-serif; padding: 10px;overflow: hidden;}
+ul {list-style: none; font-weight: normal;}
+ul li {margin: 0.5em 0em;}
+input {padding: 0px 0px 0px 2px;}
+button {margin: 1px; padding: 4px;}  
